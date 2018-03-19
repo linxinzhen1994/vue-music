@@ -10,6 +10,8 @@
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
+  // 在文件中引入stylus文件用以下的方式引入
+  
   @import "~common/stylus/variable"
   @import "~common/stylus/mixin"
 

@@ -1,6 +1,7 @@
 <template>
   <div class="tab">
     <!-- 路由跳转标签 -->
+    <!-- tag类会让router-link渲染成div -->
     <router-link to="/recommend" class="tab-item" tag="div">
       <span class="tab-link">评论</span>
     </router-link>
@@ -30,6 +31,7 @@
           padding-bottom: 5px
           color: $color-text-l
         }
+        //设置 链接激活时使用的 CSS 类名
         &.router-link-active{
           .tab-link{
             color: $color-theme
