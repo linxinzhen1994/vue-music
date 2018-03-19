@@ -1,22 +1,27 @@
 <template>
-  <div id="header">
-      <h1>HelloWorld</h1>
+  <div id="app">
+      <MHeader></MHeader>
+      <!-- router-view是路由显示的地方 -->
+      <router-view></router-view>
+      <Tab></Tab>
   </div>
 </template>
 
+
 <script>
+
+//导入组件
+import MHeader from 'components/m-header/m-header'
+import Tab from 'components/tab/tab'
+
 export default {
-  name: 'App'
+  components:{
+      MHeader,
+      Tab
+  }
 }
 </script>
 
 <style>
-#header {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
