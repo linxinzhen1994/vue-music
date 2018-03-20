@@ -1,9 +1,10 @@
 <template>
   <div id="app">
       <MHeader></MHeader>
+      <Tab></Tab>
       <!-- router-view是路由显示的地方 -->
       <router-view></router-view>
-      <Tab></Tab>
+
   </div>
 </template>
 
@@ -23,5 +24,5 @@ export default {
 </script>
 
 <style>
- 
+
 </style>
