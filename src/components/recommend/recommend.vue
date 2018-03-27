@@ -1,9 +1,9 @@
 <template>
   <div class="swipe">
     <mt-swipe :auto="0">
-      <mt-swipe-item v-for="(item,index) in recommends" :key=index>
-        <a :href=item.linkUrl>
-          <img :src=item.picUrl>
+      <mt-swipe-item v-for="(item,index) in recommends" :key="index">
+        <a :href="item.linkUrl">
+          <img :src="item.picUrl">
         </a>
       </mt-swipe-item>
     </mt-swipe>
@@ -12,7 +12,7 @@
 
 <script type="text/ecmascript-6">
 //导入单个文件或者是函数
-import { getRecommend } from "api/recommend.js";
+import { getRecommend , getDiscList } from "api/recommend.js";
 import { ERR_OK } from "api/config.js";
 
 export default {
@@ -22,15 +22,22 @@ export default {
       }
     },
   created() {
-    this.getRecommend();
+    this._getRecommend();
+    this._getDiscList();
+
   },
   methods: {
-    getRecommend() {
+    _getRecommend() {
       getRecommend().then(res => {
         if (res.code === ERR_OK) {
           this.recommends=res.data.slider;
         }
       });
+    },
+    _getDiscList(){
+      getDiscList().then(res =>{
+        console.log(res)
+      })
     }
   }
 };
