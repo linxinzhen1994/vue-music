@@ -3,10 +3,10 @@
     <!-- 路由跳转标签 -->
     <!-- tag类会让router-link渲染成div -->
     <router-link to="/recommend" class="tab-item" tag="div">
-      <span class="tab-link">评论</span>
+      <span class="tab-link">推荐</span>
     </router-link>
     <router-link to="/singer" class="tab-item" tag="div">
-      <span class="tab-link">唱歌</span>
+      <span class="tab-link">歌手</span>
     </router-link>
     <router-link to="/rank" class="tab-item" tag="div">
       <span class="tab-link">排行</span>
