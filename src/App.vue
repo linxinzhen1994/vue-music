@@ -2,7 +2,7 @@
   <div id="app">
       <MHeader></MHeader>
       <Tab></Tab>
-      <!-- 进行缓存,每一次请求都能从缓存中快速渲染，而不是重新渲染 -->
+      <!-- 内容保存在缓存中,每一次请求都能从缓存中快速渲染，而不是重新渲染 -->
       <keep-alive>
         <!-- router-view是路由显示的地方 -->
         <router-view></router-view>

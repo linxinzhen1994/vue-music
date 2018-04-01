@@ -15,7 +15,6 @@ export function getSingerList() {
     platform: 'yqq'
   })
 
-  // return jsonp(url, data, options)
-  return data 
+  return jsonp(url, data, options)
 }
 
