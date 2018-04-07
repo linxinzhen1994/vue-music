@@ -11,6 +11,8 @@ import listView from 'base/listView/listView'
 const HOT_SINGER_LEN = 10
 const HOT_NAME = '热门'
 
+
+
 export default {
 	data() {
 		return {
