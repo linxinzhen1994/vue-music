@@ -11,6 +11,13 @@
                 </ul>
             </li>
         </ul>
+        <div class="SortName">
+            <ul>
+                <li v-for="(group1,index3) in getSortName" :key="index3">
+                    {{group1}}
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 <script>
@@ -20,6 +27,15 @@ export default {
         data: {
             type: Array,
             default: []
+        }
+    },
+    computed:{
+        getSortName(){
+            
+            return this.data.map(item=>{
+               return item.title.substr(0,1)
+            })
+
         }
     }
 }
@@ -60,6 +76,20 @@ export default {
                     font-size: $font-size-medium
                 }   
             }
+        }
+    }
+    .SortName{
+        width: 18px;
+        height: 370px;
+        float: left;
+        position: fixed;
+        top: 160px;
+        right: 0px;
+        font-size: 12px;
+        color: rgba(255,255,255,0.5);
+        text-align: center;
+        ul{
+         list-style: none;
         }
     }
 }
